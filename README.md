@@ -12,4 +12,5 @@ edit ./conf/nhcd.conf
 
 # run as service
 (to do)
+
 pm2 

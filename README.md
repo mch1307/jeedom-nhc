@@ -22,12 +22,14 @@ NHC section:
     locMsg="{\"cmd\":\"listlocations\"}" [Niko message for getting locations list]
 
 JEEDOM section:
+
     host=jeedom.cs.local [Jeedom hostname]
     urlRoot=http://jeedom.cs.local [Jeedom root URL]
     apiPath=/core/api/jeeApi.php? [Jeedom api path]
     apiKey=hxxxxxxxxxxxxxxxxxn [Jeedom AOI key]
 
 DAEMON:
+
     listen=8081 [Http listen port]
     logLevel=DEBUG [log level]
     logFile="./log/jeedom-nhc.log" [Log file full path]

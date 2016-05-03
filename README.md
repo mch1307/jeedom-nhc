@@ -1,19 +1,36 @@
 # jeedom-nhc
-Jeedom - NHC interface running on nodejs
+Jeedom - NHC interface developped in nodejs
 
-#install
-download archive
-
-uncompress to desired location
-
+# Install
+download zip from github
+uncompress downloaded zip 
+/opt
+cd jeedom-nhc
 npm install
 
-#configuration
-(to do)
+# Configuration
+Edit config file in conf folder, ini format, 3 sections:
 
-edit ./conf/nhcd.conf
+NHC section:
 
-# run as service
-(to do)
+host= [niko ip address]
+port=8000 [should not change]
+keepAlive=60000 [not used]
+bufferSize=1048576 [not used]
+registerMsg="{\"cmd\":\"startevents\"}" [Niko socket listening registration message]
+equMsg="{\"cmd\":\"listactions\"}" [Niko message for getting actions list]
+locMsg="{\"cmd\":\"listlocations\"}" [Niko message for getting locations list]
 
-pm2 
+JEEDOM section:
+host=jeedom.cs.local [Jeedom hostname]
+urlRoot=http://jeedom.cs.local [Jeedom root URL]
+apiPath=/core/api/jeeApi.php? [Jeedom api path]
+apiKey=hxxxxxxxxxxxxxxxxxn [Jeedom AOI key]
+
+DAEMON:
+run=Y [not used]
+listen=8081 [Http listen port]
+logLevel=DEBUG [log level]
+logFile="./log/nhcJeedom.log" [Log file full path]
+dbFile="./db/nhcJeedom.db" [DB file full path]
+persistPath="./data" [Path where daemon will store Jeedom and NHC equivalences]

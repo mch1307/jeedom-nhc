@@ -1,5 +1,6 @@
 # jeedom-nhc
 Jeedom - NHC interface developped in nodejs
+
 Allows Jeedom and Niko Home Control to interact for lighting and power switches
 
 # Install
@@ -16,10 +17,10 @@ The configuration is done in conf.js. The custom config needs to be done using N
 
 The following variables are needed before launching the app:
 
-  JEEHOST: hostname running Jeedom
-  JEEAPI: Jeedom JSONRPC Api key
-  JEEURL: Jeedom root url
-  NHCHOST: Ip address/hostname of Niko Home Control
+    JEEHOST: hostname running Jeedom
+    JEEAPI: Jeedom JSONRPC Api key
+    JEEURL: Jeedom root url
+    NHCHOST: Ip address/hostname of Niko Home Control
 
 supervisor can be used in order to run the app, more info can be found on the Wiki
 

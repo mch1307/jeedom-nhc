@@ -1,35 +1,26 @@
 # jeedom-nhc
 Jeedom - NHC interface developped in nodejs
+Allows Jeedom and Niko Home Control to interact for lighting and power switches
 
 # Install
 download zip from github
+
 uncompress downloaded zip 
-/opt
+
 cd jeedom-nhc
+
 npm install
 
 # Configuration
-Edit config file in conf folder, ini format, 3 sections:
+The configuration is done in conf.js. The custom config needs to be done using NODE ENV.
 
-NHC section:
+The following variables are needed before launching the app:
 
-    host= [niko ip address]
-    port=8000 [should not change]
-    keepAlive=60000 
-    bufferSize=1048576 [not used]
-    registerMsg="{\"cmd\":\"startevents\"}" [Niko socket listening registration message]
-    equMsg="{\"cmd\":\"listactions\"}" [Niko message for getting actions list]
-    locMsg="{\"cmd\":\"listlocations\"}" [Niko message for getting locations list]
+  JEEHOST: hostname running Jeedom
+  JEEAPI: Jeedom JSONRPC Api key
+  JEEURL: Jeedom root url
+  NHCHOST: Ip address/hostname of Niko Home Control
 
-JEEDOM section:
+supervisor can be used in order to run the app, more info can be found on the Wiki
 
-    host=jeedom.cs.local [Jeedom hostname]
-    urlRoot=http://jeedom.cs.local [Jeedom root URL]
-    apiPath=/core/api/jeeApi.php? [Jeedom api path]
-    apiKey=hxxxxxxxxxxxxxxxxxn [Jeedom AOI key]
-
-DAEMON:
-
-    listen=8081 [Http listen port]
-    logLevel=DEBUG [log level]
-    logFile="./log/jeedom-nhc.log" [Log file full path]
+# Features

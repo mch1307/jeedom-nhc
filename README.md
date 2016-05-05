@@ -13,7 +13,9 @@ cd jeedom-nhc
 npm install
 
 # Configuration
-The configuration is done in conf.js. The custom config needs to be done using NODE ENV.
+The configuration is handled in conf.js and should work fine as is. 
+
+The custom config, reflecting the local needs (ip, hostnames, keys, ...) needs to be done using NODE ENV.
 
 The following variables are needed before launching the app:
 

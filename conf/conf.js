@@ -5,7 +5,7 @@ cfg.JEEDOM = {}
 cfg.NHC = {}
 cfg.DAEMON = {}
 
-cfg.DAEMON.logFile = path.join(__dirname, '/log/jeedom-nhc.log')
+cfg.DAEMON.logFile = path.join(__dirname, '../log/jeedom-nhc.log')
 cfg.DAEMON.logLevel = process.env.LOGLEVEL || 'INFO'
 cfg.DAEMON.listen = process.env.LISTEN || 8081
 

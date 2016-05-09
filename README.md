@@ -3,12 +3,24 @@ Jeedom - NHC interface developped in nodejs
 
 Allows Jeedom and Niko Home Control to interact for lighting and power switches
 
-# Install
+# Install 
+follow instruction to install app in /opt/jeedom-nhc and run it as www-data user
+
 download zip from github
+    
+    sudo wget https://github.com/mch1307/jeedom-nhc/archive/master.zip
+    
+uncompress downloaded zip (unzip) 
 
-uncompress downloaded zip 
+cd uncompressed folder
 
-cd jeedom-nhc
+sudo mkdir -p /opt/jeedom-nhc
+
+sudo cp -R * /opt/jeedom-nhc
+
+sudo chown -R www-data:www-data /opt/jeedom-nhc
+
+cd /opt/jeedom-nhc
 
 npm install
 

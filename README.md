@@ -14,15 +14,11 @@ uncompress downloaded zip (unzip)
 
 cd uncompressed folder
 
-sudo mkdir -p /opt/jeedom-nhc
-
-sudo cp -R * /opt/jeedom-nhc
-
-sudo chown -R www-data:www-data /opt/jeedom-nhc
-
-cd /opt/jeedom-nhc
-
-npm install
+    sudo mkdir -p /opt/jeedom-nhc
+    sudo cp -R * /opt/jeedom-nhc
+    sudo chown -R www-data:www-data /opt/jeedom-nhc
+    cd /opt/jeedom-nhc
+    sudo npm install
 
 # Configuration
 The configuration is handled in conf.js and should work fine as is. 

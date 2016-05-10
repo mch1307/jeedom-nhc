@@ -9,19 +9,19 @@ var persist = require('./lib/persist')
 var Eq = require('./lib/equipment')
 
 // Checking mandatory variables are defined
-if (typeof cfg.JEEDOM.host === 'undefined') {
+if (cfg.JEEDOM.host === undefined) {
   log.error('fatal error: JEEHOST not defined')
   throw new Error('fatal error: JEEHOST not defined')
 }
-if (typeof cfg.JEEDOM.urlRoot === 'undefined') {
+if (cfg.JEEDOM.urlRoot === undefined) {
   log.error('fatal error: JEEURL not defined')
   throw new Error('fatal error: JEEURL not defined')
 }
-if (typeof cfg.JEEDOM.apiKey === 'undefined') {
+if (cfg.JEEDOM.apiKey === undefined) {
   log.error('fatal error: JEEAPI not defined')
   throw new Error('fatal error: JEEAPI not defined')
 }
-if (typeof cfg.NHC.host === 'undefined') {
+if (cfg.NHC.host === undefined) {
   log.error('fatal error: NHCHOST not defined')
   throw new Error('fatal error: NHCHOST not defined')
 }

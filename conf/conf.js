@@ -10,6 +10,7 @@ cfg.DAEMON.logLevel = process.env.LOGLEVEL || 'INFO'
 cfg.DAEMON.listen = process.env.LISTEN || 8081
 
 cfg.JEEDOM.host = process.env.JEEHOST
+cfg.JEEDOM.port = process.env.JEEPORT || 80
 cfg.JEEDOM.urlRoot = process.env.JEEURL
 cfg.JEEDOM.apiPath = '/core/api/jeeApi.php?'
 cfg.JEEDOM.apiUrl = cfg.JEEDOM.urlRoot + cfg.JEEDOM.apiPath
